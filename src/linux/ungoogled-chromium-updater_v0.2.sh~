@@ -7,13 +7,21 @@ echo "Github | alanmugiwara"
 echo "==========================="
 echo ""
 
-# Declaração de variáveis
+# Caminho da instalação
 browser_folder="/opt/ungoogled-chromium"
-download_url="https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/releases/download/145.0.7632.116-1/ungoogled-chromium-145.0.7632.116-1-x86_64.AppImage"
+
+# Renomeia o binário baixado
 download_file_rename="ungoogled-chromium-143.0.7499.146-1-x86_64.AppImage"
 
-# Baixa a aplicação
-wget --show-progress -q -O "$download_file_rename" "$download_url"
+# Pega a URL da última release usando a API do github
+download_latest=$(curl -s https://api.github.com/repos/ungoogled-software/ungoogled-chromium-portablelinux/releases/latest \
+    | grep browser_download_url \
+    | grep 'x86_64.AppImage"' \
+    | grep -v zsync \
+    | cut -d '"' -f 4)
+
+# Baixa o binário e chama a variável de rename
+wget --show-progress -q -O "$download_file_rename" "$download_latest"
 
 # Permissão de execução
 chmod +x "$download_file_rename"
@@ -22,9 +30,9 @@ chmod +x "$download_file_rename"
 sudo mv "$download_file_rename" "$browser_folder"
 
 echo ""
-echo "================================"
+echo "==================================="
 echo "Atualização concluída com sucesso!"
-echo "================================"
+echo "==================================="
 echo ""
 
 echo "=============================="
@@ -32,4 +40,4 @@ echo ">Verificação de segurança<"
 echo "Lista de arquivos no diretório"
 echo "=============================="
 echo ""
-ls "$browser_folder"
+ls -la "$browser_folder"
