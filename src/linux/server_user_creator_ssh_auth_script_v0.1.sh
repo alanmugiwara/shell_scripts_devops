@@ -1,4 +1,4 @@
-#! /bin/env sh
+#!/usr/bin/env sh
 
 echo "================================================="
 echo "server user creator + ssh auth script v0.1-linux"
