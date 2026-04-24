@@ -1,10 +1,10 @@
 #! /bin/env sh
 
-echo "==========================================="
-echo "server user creator + ssh auth script v0.1"
+echo "================================================="
+echo "server user creator + ssh auth script v0.1-linux"
 echo "Release date | 20260311"
 echo "github | @alanmugiwara"
-echo "==========================================="
+echo "================================================="
 echo ""
 
 #01 Input - nome de usuário
