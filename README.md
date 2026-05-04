@@ -7,6 +7,8 @@
 [![issues counter](https://img.shields.io/github/issues/alanmugiwara/shell_scripts_devops?color=8A2BE2)](https://github.com/alanmugiwara)
 [![repo size](https://img.shields.io/github/repo-size/alanmugiwara/shell_scripts_devops?color=8A2BE2)](https://github.com/alanmugiwara)
 
+<img src="https://raw.githubusercontent.com/alanmugiwara/shell_scripts_devops/refs/heads/main/logo.png" width="450">
+
 # ⚙️ Shell Scripts DevOps
 Este repositório reúne scripts utilitários para automação de tarefas comuns em ambientes AWS e Linux, com foco em produtividade, provisionamento e segurança.
 
